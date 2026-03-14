@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aayush Adhikari — AI Enthusiast & ML Researcher. Portfolio of research publications, projects, and achievements." />
+  <title>Aayush Adhikari — AI &amp; ML Researcher</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">AA<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's Connect</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+
+  <!-- LEFT: Text -->
+  <div class="hero-text">
+    <div class="hero-tag">Portfolio · 2025</div>
+    <h1 class="hero-name">Aayush<br><span class="accent">Adhikari</span></h1>
+    <p class="hero-title">AI Enthusiast, Aspiring Researcher &amp; Full-Stack Builder</p>
+    <p class="hero-desc">
+      <strong>AI Enthusiast</strong> &amp; Aspiring Research Student in
+      <strong>Machine Learning &amp; AI Research</strong>, passionate about
+      innovative problem-solving. Exploring advanced algorithms to drive impactful
+      research — from quantum-enhanced classifiers to DDoS detection systems.
+      Also builds web experiences that are fast, minimal, and intentional.
+    </p>
+    <div class="hero-btns">
+      <a href="#research" class="btn-primary">View Research</a>
+      <a href="#contact"  class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: Photo Carousel -->
+  <div class="hero-visual">
+    <div class="photo-carousel" id="photoCarousel">
+
+      <!-- Photo 1 -->
+      <div class="photo-frame" id="frame-0">
+        <img src="assets/images/photo1.jpeg" alt="Aayush Adhikari" />
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <p>Photo 1</p>
+          <p style="font-size:0.55rem;opacity:0.5">./assets/images/photo1.jpeg</p>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-frame" id="frame-1" style="opacity:0; transform:scale(0.97);">
+        <img src="assets/images/photo2.jpeg" alt="Aayush Adhikari" />
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <p>Photo 2</p>
+          <p style="font-size:0.55rem;opacity:0.5">./assets/images/photo2.jpeg</p>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-frame" id="frame-2" style="opacity:0; transform:scale(0.97);">
+        <img src="assets/images/photo3.jpeg" alt="Aayush Adhikari" />
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <p>Photo 3</p>
+          <p style="font-size:0.55rem;opacity:0.5">./assets/images/photo3.jpeg</p>
+        </div>
+      </div>
+
+      <div class="corner-tag">ML · AI · Dev</div>
+      <div class="photo-dots">
+        <div class="photo-dot active" onclick="goToPhoto(0)"></div>
+        <div class="photo-dot"        onclick="goToPhoto(1)"></div>
+        <div class="photo-dot"        onclick="goToPhoto(2)"></div>
+      </div>
+    </div>
+    <div class="photo-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+      ME
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <span>Scrollllll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag">Who I Am</div>
+    <h2 class="section-title">Building at the intersection<br>
+      <span class="dim">of research &amp; engineering</span>
+    </h2>
+
+    <div class="about-grid">
+
+      <!-- Stats column -->
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Research Publications &amp; Manuscripts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2×</div>
+          <div class="stat-label">IEEE ICCCNT Published Papers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">B.Tech</div>
+          <div class="stat-label">Computer Science Engineering — COMPEX Scholar</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">....</div>
+          <div class="stat-label">Curiosity-Driven Research Problems</div>
+        </div>
+      </div>
+
+      <!-- Bio column -->
+      <div class="about-content reveal reveal-delay-1">
+        <p>
+          I'm a <strong>Computer Science Engineer</strong> and <strong>AI/ML researcher</strong>
+          with a passion for solving real-world problems through intelligent systems. From detecting
+          DDoS attacks in real-time to classifying microarray gene expression data with
+          quantum-enhanced models — my work lives at the edge of what's computationally possible.
+        </p>
+        <p>
+          I believe the best research isn't just technically rigorous — it's
+          <strong>narratively compelling</strong> and practically impactful. Every model I build
+          tells a story about data, and every project ships as something usable.
+        </p>
+        <p>
+          Beyond research, I design and build <strong>web applications</strong> — from AI-powered
+          SaaS landing pages to market intelligence tools — with an emphasis on clean architecture,
+          sharp UI, and performance-first thinking.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Quantum ML</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">CNN / Transformers</span>
+          <span class="skill-tag">Cybersecurity</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════
+     RESEARCH
+════════════════════════════════════════ -->
+<section id="research">
+  <div class="container">
+    <div class="section-tag">Research</div>
+    <h2 class="section-title">Publications &amp; <span class="dim">Research Works</span></h2>
+    <p class="section-lead">
+      Peer-reviewed papers, manuscripts under review, and independent research investigations
+      across cybersecurity, bioinformatics, quantum ML, and AI systems.
+    </p>
+
+    <div class="research-list">
+
+      <!-- ── Paper 01 ── -->
+      <div class="research-card reveal">
+        <div class="research-meta">
+          <span class="research-num">01</span>
+          <span class="research-badge badge-published">IEEE Published</span>
+          <span class="research-badge badge-individual" style="color:#aaa;">IIT Mandi, India</span>
+        </div>
+        <div class="research-title">
+          Enhancing DDoS Attack Detection: A Hybrid SVM-Decision Tree Ensemble Approach
+        </div>
+        <div class="research-venue">
+          The 15th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT)
+        </div>
+        <div class="research-abstract">
+          Developed a hybrid machine learning model combining SVM and Decision Trees to detect DDoS attacks.
+          Achieved very high accuracy on the CICDDoS2019 dataset, enhancing network security through an ensemble
+          methodology that leverages the complementary strengths of both classifiers.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors"><!-- add co-authors if any --></span>
+          <div class="research-links">
+            <!-- ★ REPLACE href="#" WITH YOUR ACTUAL PAPER LINK ★ -->
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AMhOZS8AAAAJ&citation_for_view=AMhOZS8AAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener" class="link-btn">
+              ↗ View Paper
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Paper 02 ── -->
+      <div class="research-card reveal reveal-delay-1">
+        <div class="research-meta">
+          <span class="research-num">02</span>
+          <span class="research-badge badge-published">IEEE Published</span>
+          <span class="research-badge badge-individual" style="color:#aaa;">IIT Mandi, India</span>
+        </div>
+        <div class="research-title">
+          Predicting DDoS Attacks: A Machine Learning Approach using ALDDoS Dataset
+        </div>
+        <div class="research-venue">
+          The 15th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT)
+        </div>
+        <div class="research-abstract">
+          Utilized machine learning models including RandomForest and XGBoost to predict DDoS attacks with
+          very high accuracy using the ALDDoS dataset. Enhanced cyber defense capabilities by developing a
+          custom web proxy policy as a preventive layer.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors"><!-- add co-authors if any --></span>
+          <div class="research-links">
+            <!-- ★ REPLACE href="#" WITH YOUR ACTUAL PAPER LINK ★ -->
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AMhOZS8AAAAJ&citation_for_view=AMhOZS8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" class="link-btn">
+              ↗ View Paper
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Paper 03 ── -->
+      <div class="research-card reveal reveal-delay-2">
+        <div class="research-meta">
+          <span class="research-num">03</span>
+          <span class="research-badge badge-review">Under Review</span>
+          <span class="research-badge badge-individual" style="color:#aaa;">Results in Engineering · arXiv</span>
+        </div>
+        <div class="research-title">
+          A Two-Stage Ensemble Feature Selection with Particle Swarm Optimization for Microarray Data
+          Classification in Distributed Computing Environments
+        </div>
+        <div class="research-venue">
+          Submitted to Results in Engineering · Available as arXiv preprint
+        </div>
+        <div class="research-abstract">
+          Proposed an ensemble feature selection method leveraging Particle Swarm Optimization for microarray
+          data classification. Improved classification performance in distributed computing environments by
+          selecting optimal gene subsets — addressing the high-dimensional challenge inherent in bioinformatics datasets.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors">
+            Aayush Adhikari, Sandesh Bhatta, Harendra Singh, Amit Mishra, Khair Ul Nisa,
+            Abu Taha Zamani, Aaron Sapkota, Debendra Muduli, Nikhat Parveen
+          </span>
+          <div class="research-links">
+            <!-- ★ REPLACE href="#" WITH YOUR ARXIV LINK ★ -->
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AMhOZS8AAAAJ&citation_for_view=AMhOZS8AAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener" class="link-btn">
+              ↗ arXiv Preprint
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Paper 04 ── -->
+      <div class="research-card reveal">
+        <div class="research-meta">
+          <span class="research-num">04</span>
+          <span class="research-badge badge-manuscript">Manuscript Complete</span>
+        </div>
+        <div class="research-title">
+          A Quantum-Enhanced Ensemble Learning Approach for Accurate Classification of Functional and
+          Non-Functional Requirements in Software Engineering
+        </div>
+        <div class="research-venue">Manuscript · Submission Pending</div>
+        <div class="research-abstract">
+          Developed a quantum-enhanced ensemble learning framework for software requirements classification,
+          achieving <strong style="color:var(--cyan)">95.05% accuracy</strong> by integrating variational
+          quantum circuits with classical machine learning and transformer models — a novel hybrid paradigm
+          at the intersection of quantum computing and NLP.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors">
+            Sandesh Bhatta, Aaron Sapkota, Aayush Adhikari, Debendra Muduli, Jyoti Bhushan Dahal
+          </span>
+          <div class="research-links">
+            <!-- ★ REPLACE href="#" WITH YOUR MANUSCRIPT / PREPRINT LINK ★ -->
+            <a href="https://drive.google.com/file/d/1jt5a8j8_latYi8JOQ4c1D898k_ZXEGFj/view?usp=drive_link" target="_blank" rel="noopener" class="link-btn">
+              ↗ View Manuscript
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Paper 05 ── -->
+      <div class="research-card reveal reveal-delay-1">
+        <div class="research-meta">
+          <span class="research-num">05</span>
+          <span class="research-badge badge-individual">Individual Research</span>
+        </div>
+        <div class="research-title">
+          Deep Learning-Based Detection and Classification of Nepali Currency Denominations
+          Using Optimized CNNs
+        </div>
+        <div class="research-venue">Independent Research Work</div>
+        <div class="research-abstract">
+          Built a deep learning system using MobileNetV2 for real-time classification and counterfeit
+          detection of Nepali currency denominations. Optimized for edge-device efficiency, making the
+          solution viable for deployment in resource-constrained environments.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors"></span>
+          <div class="research-links">
+            <!-- ★ REPLACE href="#" WITH YOUR REPORT / REPO LINK ★ -->
+            <a href="https://drive.google.com/file/d/1nnKu2hDEEVSNoMFKjTxycE2BgBpsPk0V/view?usp=drive_link" target="_blank" rel="noopener" class="link-btn">
+              ↗ Read Report
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Paper 06 ── -->
+      <div class="research-card reveal reveal-delay-2">
+        <div class="research-meta">
+          <span class="research-num">06</span>
+          <span class="research-badge badge-individual">Individual Research</span>
+        </div>
+        <div class="research-title">
+          Report on Mental Health Chatbot: Emotional Detection and Guidance
+        </div>
+        <div class="research-venue">Independent Research Work</div>
+        <div class="research-abstract">
+          Built an AI mental health chatbot using Whisper ASR, a fine-tuned DistilRoBERTa emotion classifier,
+          and a RAG (Retrieval-Augmented Generation) framework for crisis detection and 24/7 therapeutic support.
+          Focused on safe, empathetic response generation with real-time emotion tracking.
+        </div>
+        <div class="research-footer">
+          <span class="research-authors"></span>
+          <div class="research-links">
+            <a href="https://drive.google.com/file/d/1I0kQoB0unWK1brZBGffkdRK6zHfcFp_R/view?usp=drive_link" target="_blank" rel="noopener" class="link-btn">
+              ↗ Read Report
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /research-list -->
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-tag">Portfolio</div>
+    <h2 class="section-title">Selected <span class="dim">Projects</span></h2>
+    <p class="section-lead">
+      A curated selection of products, tools, and experiments — from AI-powered SaaS to intelligent
+      systems built for real-world impact.
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- ── Project: NoHunger ── -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-card-header">
+          <div class="project-icon">🌍</div>
+        </div>
+        <div class="project-title">NoHunger (Hackathon Winner project)</div>
+        <div class="project-desc">
+          A platform addressing SDG Goal 2 (Zero Hunger) — connecting food surplus with distribution networks,
+          tracking food security metrics, and enabling community-level sustainable food access solutions.
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">SDG</span>
+            <span class="project-tag">Sustainability</span>
+            <span class="project-tag">Full-Stack</span>
+          </div>
+          <div class="project-links">
+            <!-- ★ REPLACE href="#" WITH YOUR LIVE SITE LINK ★ -->
+            <a href="https://nohunger-gilt.vercel.app/" target="_blank" rel="noopener" class="link-btn">↗ Live Site</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Project: LaunchKit AI ── -->
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon">🚀</div>
+        </div>
+        <div class="project-title">LaunchKit AI</div>
+        <div class="project-desc">
+          A production-ready AI platform that generates complete product launch assets — copy, landing pages,
+          email sequences — in under 10 minutes. Built end-to-end from ideation to deployment with a focus
+          on founder-first UX.
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">AI</span>
+            <span class="project-tag">SaaS</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">LLM</span>
+          </div>
+          <div class="project-links">
+            <!-- ★ REPLACE href="#" WITH YOUR LIVE SITE LINK ★ -->
+            <a href="https://launchkit-ai-two.vercel.app/" target="_blank" rel="noopener" class="link-btn">↗ Live Site</a>
+          </div>
+        </div>
+      </div>
+      <!-- ── Project: SPYOS ── -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-card-header">
+          <div class="project-icon">🕵️</div>
+        </div>
+        <div class="project-title">SPYOS — Market Intelligence War Room</div>
+        <div class="project-desc">
+          Autonomous competitive intelligence tool that scrapes competitor websites, identifies product
+          and content gaps, and generates actionable strategy reports. Zero-cost architecture built
+          for startups and solo operators to move smarter.
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">AI Agent</span>
+            <span class="project-tag">Competitive Intel</span>
+            <span class="project-tag">LLM</span>
+          </div>
+          <div class="project-links">
+            <!-- ★ REPLACE href="#" WITH YOUR LIVE / DEMO LINK ★ -->
+            <a href="https://spy-os-war-room.vercel.app/" target="_blank" rel="noopener" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ── Project: Lung Classifier ── -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-card-header">
+          <div class="project-icon">🫁</div>
+        </div>
+        <div class="project-title">Lung Disease Classifier</div>
+        <div class="project-desc">
+          A CNN for classifying chest X-ray images into COVID-19, Normal, and Pneumonia categories.
+          Implements data augmentation, normalization, and hyperparameter optimization via Keras Tuner —
+          pushing diagnostic accuracy on limited clinical data.
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">CNN</span>
+            <span class="project-tag">Medical AI</span>
+            <span class="project-tag">Keras</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Aayush3466/COVID-19-Pneumonia-Classification-" target="_blank" rel="noopener" class="link-btn secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon">==</div>
+        </div>
+        <div class="project-title">Sentiment Analysis</div>
+        <div class="project-desc">
+          Developed a full-lifecycle NLP project incorporating TF-IDF vectorization and data preprocessing to transform raw text into actionable emotional intelligence insights.
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">CNN</span>
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">Classification</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Aayush3466/Sentiment_analysis" target="_blank" rel="noopener" class="link-btn secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════
+     ACHIEVEMENTS
+════════════════════════════════════════ -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-tag">Achievements</div>
+    <h2 class="section-title">Awards &amp; <span class="dim">Certifications</span></h2>
+    <p class="section-lead">Scholarships, recognitions, and professional certifications that mark milestones in the journey.</p>
+
+    <div class="achievements-grid">
+
+      <div class="ach-card reveal">
+        <div class="ach-icon">🏆</div>
+        <div>
+          <div class="ach-title">COMPEX Scholarship — Indian Embassy</div>
+          <div class="ach-sub">
+            Fully-funded B.Tech Computer Science Engineering scholarship awarded by EDCIL,
+            Government of India (2021–2025), including monthly stipend. Competitive merit-based selection.
+          </div>
+          <!-- ★ REPLACE href="#" WITH YOUR AWARD LINK ★ -->
+          <a href="https://drive.google.com/file/d/11oKeuRjsmrU2Vdi4Uk4h2nk2SrZ688I6/view?usp=drive_link" target="_blank" rel="noopener" class="ach-link">↗ View Award</a>
+        </div>
+      </div>
+
+      <div class="ach-card reveal reveal-delay-1">
+        <div class="ach-icon">🎓</div>
+        <div>
+          <div class="ach-title">+2 Academic Scholarship</div>
+          <div class="ach-sub">
+            Awarded a competitive scholarship for higher secondary studies, recognizing exceptional
+            academic performance at the secondary level.
+          </div>
+        </div>
+      </div>
+
+      <div class="ibm-certs reveal">
+        <div class="ibm-cert-title">
+          <span>🔷</span> IBM Professional Certificates — Machine Learning
+        </div>
+        <div class="ibm-list">
+          <span class="ibm-item">Exploratory Data Analysis for ML</span>
+          <span class="ibm-item">Supervised Learning: Regression</span>
+          <span class="ibm-item">Supervised Learning: Classification</span>
+          <span class="ibm-item">Unsupervised Machine Learning</span>
+          <span class="ibm-item">CNNs with TensorFlow</span>
+          <span class="ibm-item">Basics of Machine Learning</span>
+        </div>
+        <!-- ★ REPLACE href="#" WITH YOUR IBM CERT LINK ★ -->
+        <a href="https://www.linkedin.com/in/aayush-adhikari-a78040237/details/certifications/" target="_blank" rel="noopener" class="ach-link">↗ View IBM Certificates</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">Contact</div>
+    <h2 class="section-title">Let's <span class="dim">Work Together</span></h2>
+    <p class="section-lead">
+      Open to research collaborations, project discussions, and interesting conversations about AI.
+      Drop a message and I'll get back to you.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- Contact info -->
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <!-- ★ REPLACE WITH YOUR ACTUAL EMAIL ★ -->
+            <div class="contact-item-value">
+              <a href="mailto:your.email@example.com">ayushadhikari3466@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🔗</div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <!-- ★ REPLACE WITH YOUR LINKEDIN URL ★ -->
+            <div class="contact-item-value">
+              <a href="https://www.linkedin.com/in/aayush-adhikari-a78040237/" target="_blank" rel="noopener">
+                Linkedin
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🐙</div>
+          <div>
+            <div class="contact-item-label">GitHub</div>
+            <!-- ★ REPLACE WITH YOUR GITHUB URL ★ -->
+            <div class="contact-item-value">
+              <a href="https://github.com/Aayush3466" target="_blank" rel="noopener">
+                github.com/Aayush3466
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Nepal · Available Globally</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form (EmailJS) -->
+      <form class="contact-form reveal reveal-delay-1" id="contactForm" onsubmit="sendEmail(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_name">Name</label>
+            <input type="text" id="from_name" name="from_name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="reply_to">Email</label>
+            <input type="email" id="reply_to" name="reply_to" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Research collaboration, project inquiry..." required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about what you're working on..." required></textarea>
+        </div>
+        <div id="form-status"></div>
+        <button type="submit" class="btn-primary" id="submitBtn">Send Message →</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">Aayush Adhikari.</div>
+  <div class="footer-copy">© 2025 · Built with intention &amp; caffeine</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
